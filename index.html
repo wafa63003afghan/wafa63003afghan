@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wafa International Trade Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 25px;
+        }
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), url('https://via.placeholder.com/1600x900?text=Global+Trade+Solutions') no-repeat center center/cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero h2 {
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        .cta-btn {
+            background-color: #e74c3c;
+            padding: 15px 35px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-btn:hover {
+            background-color: #c0392b;
+        }
+
+        /* About Section */
+        #about {
+            background: #ecf0f1;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        #about h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        #about p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Why Choose Us Section */
+        #why-choose-us {
+            background: #34495e;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        #why-choose-us h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .trust-reasons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .trust-reasons div {
+            background-color: #e74c3c;
+            color: white;
+            width: 30%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .trust-reasons div:hover {
+            transform: translateY(-10px);
+        }
+        .trust-reasons div h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .trust-reasons div p {
+            font-size: 16px;
+        }
+
+        /* Services Section */
+        #services {
+            background: #f39c12;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        #services h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .service {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .service div {
+            background-color: white;
+            color: #333;
+            width: 30%;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .service div:hover {
+            transform: translateY(-10px);
+        }
+        .service div h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .service div p {
+            font-size: 16px;
+        }
+
+        /* Products Section */
+        #products {
+            background: #fff;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        #products h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .product {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .product div {
+            width: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        .product div img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .product div p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Contact Section */
+        #contact {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        #contact h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .contact-info div {
+            font-size: 18px;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        .contact-form button {
+            background-color: #e74c3c;
+            padding: 15px 30px;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #c0392b;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* WhatsApp Link Styling */
+        .whatsapp-link {
+            color: white;
+            text-decoration: none;
+            background-color: #25d366;
+            padding: 15px 35px;
+            font-weight: 600;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-link:hover {
+            background-color: #128c7e;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <!-- Company Logo (Replace with your actual logo) -->
+        <img src="images/IMG_5152[1].PNG" alt="Wafa International Trade Logo">
+        <h1>Wafa International Trade</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h2>Connecting Global Markets with Excellence</h2>
+        <p>Your trusted partner for international trade solutions</p>
+        <a href="#contact" class="cta-btn">Get in Touch</a>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            Wafa International Trade Company is a leading trade firm based in China, providing reliable and efficient import/export services across global markets. We specialize in bridging international business gaps and ensuring smooth transactions, helping clients access quality products and services from diverse industries. Our team’s experience and dedication set us apart as a trusted partner in the world of international trade.
+        </p>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <h2>Why Choose Us?</h2>
+        <div class="trust-reasons">
+            <div>
+                <h3>Experience</h3>
+                <p>With years of expertise in global trade, we provide reliable and tailored solutions for our clients.</p>
+            </div>
+            <div>
+                <h3>Global Network</h3>
+                <p>We have an extensive network that allows us to source high-quality products and ensure timely delivery worldwide.</p>
+            </div>
+            <div>
+                <h3>Customer-Centric</h3>
+                <p>Your needs are our priority. We offer personalized services that cater to your unique business requirements.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <div>
+                <h3>Import/Export</h3>
+                <p>We specialize in international import and export, ensuring efficient logistics and compliance with local regulations.</p>
+            </div>
+            <div>
+                <h3>Logistics</h3>
+                <p>We provide end-to-end logistics solutions, from warehousing to freight management, ensuring timely delivery.</p>
+            </div>
+            <div>
+                <h3>Market Research</h3>
+                <p>We conduct in-depth market research to guide your business expansion into new international markets with precision and insight.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product">
+            <div>
+                <img src="images/pexels-souvenirpixels-414612.jpg" alt="Product 1">
+                <p>Product Category 1</p>
+            </div>
+            <div>
+                <img src="images/pexels-followingnyc-12919680.jpg" alt="Product 2">
+                <p>Product Category 2</p>
+            </div>
+            <div>
+                <img src="images/pexels-karolina-grabowska-4464817.jpg" alt="Product 3">
+                <p>Product Category 3</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <div>
+                <p>Email: <a href="mailto:abbas.wafa2023@gmail.com">abbas.wafa2023@gmail.com</a></p>
+            </div>
+            <div>
+                <p>Phone: +77076569630</p>
+            </div>
+            <div>
+                <p>WhatsApp: <a href="https://wa.me/923192129399" class="whatsapp-link">+923192129399</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Wafa International Trade Company. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
